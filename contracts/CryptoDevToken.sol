@@ -11,7 +11,7 @@ contract CryptoDevToken is ERC20, Ownable {
     uint256 public constant maxTotalSupply = 10000 * 10 ** 18;
     ICryptoDevs CryptoDevsNFT;
     mapping (uint256 => bool) public tokenIdsClaimed;
-    contructor(address _cryptoDevsContract) ERC20("Crypto Dev Token", "CD") {
+    constructor(address _cryptoDevsContract) ERC20("Crypto Dev Token", "CD") {
         CryptoDevsNFT = ICryptoDevs(_cryptoDevsContract);
     }
 
